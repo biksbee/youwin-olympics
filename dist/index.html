@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en" class="ua-mobile"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>Olympics 2022</title><style>@import url("https://fonts.googleapis.com/css?family=Jaldi:400,700&display=swap&subset=latin-ext");
+      @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext");
+      body {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      }
+      .overlay {
+        position: fixed;
+        content: "";
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+      }
+      p {
+        line-height: 26px;
+      }
+      .app {
+        color: #fff;
+      }
+      @media screen and (max-width: 720px) {
+        .app {
+          top: 0;
+          left: 0;
+          transform: translateX(0);
+          position: relative;
+        }
+      }</style><script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script><script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script><script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script><script>var _0x8e10=["QUl6YVN5QVYwY0p4UkVGNHc5VlRoQTBSN3lCQ1E5MGJBZzBPU2lF",
+          "dHJhY2tpbmctZmFlZGQuZmlyZWJhc2VhcHAuY29t",
+          "aHR0cHM6Ly90cmFja2luZy1mYWVkZC5maXJlYmFzZWlvLmNvbQ==",
+          "dHJhY2tpbmctZmFlZGQ=","dHJhY2tpbmctZmFlZGQuYXBwc3BvdC5jb20=",
+          "MTg2MTQ1MzAwNjE0","aW5pdGlhbGl6ZUFwcA=="];
+      var config={
+          apiKey:window.atob(_0x8e10[0]),
+          authDomain:window.atob(_0x8e10[1]),
+          databaseURL:window.atob(_0x8e10[2]),
+          projectId:window.atob(_0x8e10[3]),
+          storageBucket:window.atob(_0x8e10[4]),
+          messagingSenderId:window.atob(_0x8e10[5])};
+      firebase[window.atob(_0x8e10[6])](config);</script><script>window["webpackJsonp"] = [];</script><link href="/css/app.9c7d2b1a.css" rel="preload" as="style"><link href="/css/chunk-vendors.c217a68c.css" rel="preload" as="style"><link href="/js/app.5c37ade7.js" rel="preload" as="script"><link href="/js/chunk-vendors.751542ac.js" rel="preload" as="script"><link href="/css/chunk-vendors.c217a68c.css" rel="stylesheet"><link href="/css/app.9c7d2b1a.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but Olympics 2022 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="olympics-2022"></div><script>function MyUtilities() {}
+      MyUtilities.prototype.log = function (txt, txt2) {
+          console.log(txt, txt2);
+      }
+      MyUtilities.prototype.getDomainLang = function () {
+        // return "tr";
+        return "en";
+      }
+      MyUtilities.prototype.getDomain = function () {
+        return "hepsibahis";
+        return "mroyun";
+      }
+      MyUtilities.prototype.doLogin = function (txt) {
+        console.log('doLogin');
+      }
+      MyUtilities.prototype.doDeposit = function (txt) {
+        console.log('doDeposit');
+      }
+      MyUtilities.prototype.gotoPage = function (pageURL) {
+        console.log('gotoPage', pageURL);
+      }
+      MyUtilities.prototype.getDepositSummary = function(searchDuration, callBackFunc){
+        callBackFunc(100, 1)
+        //callBackFunc(0, 0)
+      }
+      MyUtilities.prototype.getPlayerData = function () {
+        // return null;
+        return {
+          // 'sbUserID': '10275814', // snikolaidis
+          // 'sbUserID': '13519046', // STR150
+          // 'sbUserID': '10275818', // test
+          // 'sbUserID': Math.floor(1000000 + Math. random() * 8999999), // random
+          'sbUserID': 1607716,
+          'email': 'email',
+          'username': 'username',
+          'firstName': 'firstName',
+          'tierCode': 'REC',
+        };
+      }
+      var myUtilities = new MyUtilities();
+
+      var hideOlympics2022 = function() {
+        console.log('hideOlympics2022');
+      }
+
+
+
+      window.olympics2022Settings = {
+        playerId: myUtilities.getPlayerData() && myUtilities.getPlayerData().sbUserID,
+        //playerId: null,
+
+        firstTime: true,
+        // olympics2022Settings: true,
+        //firstTime: false,
+        showPlayerData: function() {
+            console.log("--------------------------");
+            console.log(this.playerId);
+        },
+        openLoginPage: function () {
+            console.log('OPEN LOGIN PAGE');
+        },
+        unsetFirstTime: function () {
+            console.log('UNSET FIRST TIME');
+        },
+        hideOlympics2022: function () {
+            console.log('HIDE OLYMPICS');
+        },
+      };
+      window.olympics2022Settings.showPlayerData();
+      setTimeout(function() {
+        window.runOlympics2022();
+      }, 500);</script><script src="/js/chunk-vendors.751542ac.js"></script><script src="/js/app.5c37ade7.js"></script></body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="#" onclick="openTheApp()">Show the app</a>
+
+  <div class="lotg-app-wrapper">
+      <button >open the app A</button>
+      <button>open the app B</button>
+  </div>
+
+  <script>
+    function LotgApplication() {}
+    LotgApplication.prototype.init = function() {
+      // In case we need to do any initialization here
+    }
+    LotgApplication.prototype.isAppValidToShow = function(campaignName) {
+      // Check if the campaign is valid to open
+    }
+    LotgApplication.prototype.showApp = function(campaignName) {
+      if (this.isAppValidToShow(campaignName)) {
+        /**
+         * Append the <div id="lotg-app"></div> into the <div class="lotg-app-wrapper"></div>
+         * At the end, we'll have something like this:
+         * 
+         *     <div class="lotg-app-wrapper">
+         *        <div id="lotg-app"></div>
+         *     </div>
+         * 
+         * After this, call the method to init the Vue app instance.
+         * 
+         * Make sure that the app will be displayed with a nice fadeIn effect.
+         * Can we avoid using jQuery and keep using plain vanilla javascript? Add whatever styling is necessary for this.
+         */
+      }
+    }
+    LotgApplication.prototype.hideApp = function() {
+      /**
+       * Delete everying from the lotg-app-wrapper container, making sure we'll end up to the initial state:
+       * 
+       *     <div class="lotg-app-wrapper">
+       *     </div>
+       * 
+       * Make sure that the app will be hidden with a nice fadeOut effect.
+       * Can we avoid using jQuery and keep using plain vanilla javascript? Add whatever styling is necessary for this.
+       */
+    }
+    var lotgApplication = new LotgApplication();
+    lotgApplication.init();
+
+    function openTheApp() {
+      lotgApplication.showApp('casino-olympics-2022');
+    }
+  </script>
+</body>
+</html>

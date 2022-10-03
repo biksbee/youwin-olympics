@@ -1,0 +1,40 @@
+{
+  "name": "olympics-2022",
+  "version": "22.01.0146",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build && (echo \"window[\\\"webpackJsonp\\\"] = [];\"; cat ./dist/js/chunk-vendors.*.js; echo \"\"; cat ./dist/js/app.*.js) > ./dist/js/olympics-2022.js && sed -i '/sourceMappingURL/d' ./dist/js/olympics-2022.js && cat ./dist/css/app.*.css > ./dist/css/olympics-2022.css && cp ./dist/js/olympics-2022.js /mnt/c/Dev/Perforce/Source/Dev/Web/Master/SBS/Domains/site/united-tr/s/apps/ && cp ./dist/js/olympics-2022.js /mnt/c/Dev/Perforce/Source/Dev/Web/Master/SBS/Domains/site/united-casino/s/apps/ && cp ./dist/css/olympics-2022.css /mnt/c/Dev/Perforce/Source/Dev/Web/Master/SBS/Domains/site/united-tr/s/apps/ && cp ./dist/css/olympics-2022.css /mnt/c/Dev/Perforce/Source/Dev/Web/Master/SBS/Domains/site/united-casino/s/apps/",
+    "lint": "vue-cli-service lint",
+    "assets": "http-server /mnt/c/Dev/Perforce/Source/sportingbet/ContentDelivery/www/web_hepsibahis_com/content/apps/olympics-2022/ -p 8090",
+    "sync": "rsync -a /home/stratos/dev/youwin/olympics-2022/ /mnt/c/Dev/youwin/olympics-2022/ --exclude=node_modules --exclude=.git"
+  },
+  "dependencies": {
+    "@caohenghu/vue-colorpicker": "^1.2.4",
+    "axios": "^0.24.0",
+    "core-js": "^3.3.2",
+    "firebase": "^9.6.7",
+    "gsap": "^3.9.1",
+    "vue": "^3.2.31",
+    "vue-i18n": "^8.15.0",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.1.3",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-slide-up-down": "^2.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^1.18.2",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

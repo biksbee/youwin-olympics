@@ -1,0 +1,154 @@
+{
+    "firebase-root-folder/lotg": {
+        "casino-olympics-2022": {
+            "validDomains": [ // Domains which can load this campaign
+                "hepsibahis",
+                "mroyun"
+            ],
+            "generalInfo": { // General information
+                "startDate": "2022-03-01",
+                "endDate": "2022-03-31",
+                "onBoard": {
+                    "active": true/false, // Are we going to update firebase, who opened the app and when?
+                },
+                "howItWorks": {
+                    "active": true/false, // Are we going to show a "how it works" page?
+                },
+                "preLaunchSettings": {
+                    "active": true/false, // Are we going to have a pre-launch page?
+                    "days": 2, // For how many days before, are we going to show the pre-launch page?
+                    "en": {
+                        "image": "https://...",
+                        "title": "Welcome to our awesome game!",
+                        "subtitle": "More than 1000 prizes are waiting for you! Just jump in!",
+                        "content": "<p>Welcome to our amazing game, casino, slots, gamble and betting 24/7. The winner takes it all. To play, all you need is to deposit a few thousand dollars!</p>",
+                        "cta": {
+                            "label": "Deposit now",
+                            "desktop": "/profile/deposit",
+                            "mobile": "/profile/deposit"
+                        }
+                    }
+                },
+                "welcomePageSettings": {
+                    "active": true/false, // Are we going to show a welcome page or we're going to go directly to the how it works/lobby page?
+                    "en": {
+                        "image": "https://...",
+                        "title": "Welcome to our awesome game!",
+                        "subtitle": "More than 1000 prizes are waiting for you! Just jump in!",
+                        "content": "<p>Welcome to our amazing game, casino, slots, gamble and betting 24/7. The winner takes it all. To play, all you need is to deposit a few thousand dollars!</p>",
+                        "cta": {
+                            "logged-in": "Play now",
+                            "logged-out": "Join now"
+                        }
+                    }
+                },
+                "postCampaignSettings": {
+                    "active": true/false, // Are we going to have a post-campaign page?
+                    "days": 2, // For how many days after the campaing, are we going to show this page?
+                    "en": {
+                        "image": "https://...",
+                        "title": "Our game is over",
+                        "subtitle": "Until next time, stay in touch!",
+                        "content": "<p>We hope you enjoyed our game and you are one of the big winners! Stay tuned until next time!</p>",
+                        "cta": {
+                            "label": "Play now",
+                            "desktop": "/t/casino/lobby.aspx",
+                            "mobile": "/casino"
+                        }
+                    }
+                },
+                "notEligibleSettings": {
+                    "active": true/false, // Do we have a "not eligible to play" page? False means everyone can play for free
+                    "modulesToCheck": [ // For which modules are we going to check if the player is eligible to play?
+                        "minigameSpinTheWheel", // For the minigameSpinTheWheel module, the user needs to comply with the deposit conditions
+                        "_campaign" // Future project: In case of _campaign, it means that the user needs to be eligible to access even the whole lobby
+                    ],
+                    "depositToCheck": { // Conditions for a player to be eligible to play
+                        "days": 7, // This means that the player must have done deposits of a total of 500 in the past 7 days
+                        "amount": 500,
+                        "func": "callback func" // Future project: Give a callback func which has a different condition logic
+                    },
+                    "en": {
+                        "image": "https://...",
+                        "title": "Oh noooooo!",
+                        "subtitle": "Unfortunately, you are not eligible to play!",
+                        "content": "<p>Welcome to our amazing game, casino, slots, gamble and betting 24/7. The winner takes it all. To play, all you need is to deposit a few thousand dollars!</p>",
+                        "cta": {
+                            "label": "Deposit now",
+                            "desktop": "/profile/deposit",
+                            "mobile": "/profile/deposit"
+                        }
+                    }
+                }
+            },
+            "sections": [ // Information about the modules in the campaign - this is an array of objects, since we don't know what we are going to show each time
+                {
+                    "module": "dailyCampaign", // name of the module to (lazy) load
+                    "lobby": { // What are we going to show in the lobby
+                        "en": {
+                            "image": "https://united.mediaglb.com/apps/olympics-2022/onboarding-promos.png",
+                            "title": "Daily promotions",
+                        }
+                    },
+                    "howItWorks": { // What are we going to show in the how it works page
+                        "en": {
+                            "image": "https://united.mediaglb.com/apps/olympics-2022/onboarding-promos.png",
+                            "title": "Daily promotions",
+                            "terms": [
+                                "This is term no.1",
+                                "This is term no.2",
+                                "This is term no.3"
+                            ]
+                        }
+                    },
+                    "settings": { // Specific settings for this module. Each module will have its own settings structure
+                        "en": {
+                            "2022-03-01": {
+                                "description": "<p>13 Şubat Fruit Party 2 slot oyunlarınla toplam net kazancın üstüne 250 TL’ye kadar ekstra kazan!</p>",
+                                "link": {
+                                    "desktop": "/t/games/embeddedGame.aspx?gameCode=pp-fruitparty2&page=Casino",
+                                    "mobile": "#PRAGMATIC-DOUBLE_STACKS"
+                                },
+                                "terms-and-conditions": "<ol><li>Sadece kampanya günü Casino Olimpiyatları uygulamasını açan oyuncularımız, günün kampanyasından yararlanabiliyor olacaktır.</li> <li><strong>13 Şubat</strong>&nbsp;tarihinde <strong>Fruit Party 2</strong>&nbsp;Slot oyunlarınız ile kampanyaya katılmaya hak kazanırsınız.</li><li>T&uuml;m bahislerin toplam NET Kazancı &uuml;zerine ₺250&rsquo;ye kadar %100 Ekstra Bonus kazan.</li><li>NET KAZAN&Ccedil; Hesabı:<ul><li>Toplamda ₺50 lik Bahis yaptınız</li><li>Toplamda ₺150 kazandınız</li><li>Bu durumda toplam net kazancınız ₺100&nbsp;</li><li>Aktarılacak Bonus tutarı ₺100 olacaktır. (₺100 nın y&uuml;zde y&uuml;z&uuml;)</li></ul></li><li>Bonus veya Bedava D&ouml;n&uuml;şler ile yapılacak bahisler kampanya dışıdır.</li><li><strong>%100 Ekstra&nbsp;</strong>hesabınıza Bonus olarak aktarılacaktır.</li><li>Net Kazancınızın olmaması durumunda hesabınıza ekstra bonus aktarılmayacaktır.</li><li>13 Şubat tarihinde &ccedil;ekim talebi vermeniz ile otomatik olarak kampanya dışı kalacaksınız.</li><li>Kampanya &ouml;d&uuml;l&uuml; 14 Şubat g&uuml;n&uuml; saat 15:00&rsquo;den sonra hesabınıza aktarılacaktır.</li><li>Bu promosyonun kodu: <strong>RTRSLO_OGB_EWAH</strong></li><li>Bonus, hesabınıza aktarılmasının ardından 30 gün ge&ccedil;erli olacaktır.</li><li>Bonusun 20 katı&nbsp;&ccedil;evirim&nbsp;koşulu , hesaba eklenmesini takip eden 30 gün i&ccedil;inde Casino/ Canlı Casino oyunlarında tamamlanmalıdır.</li><li>Bu s&uuml;renin aşılması durumunda, hesabınızda kalan mevcut bonus tutarı ve bonusla elde edeceğiniz olası kazan&ccedil;lar ge&ccedil;ersiz sayılır.</li><li>Genel H&uuml;k&uuml;m ve Koşullar ge&ccedil;erlidir.</li></ol>",
+                                "image": "fruitparty2.png",
+                                "title": "FRUIT PARTY 2 EKSTRA"
+                            },
+                            "2022-03-02": {
+                                "description": "<p>14 Şubat günü sadece Lightning Blackjack oynayarak ₺100 bonus kazan!</p>",
+                                "link": {
+                                    "desktop": "/t/games/embeddedGame.aspx?gameCode=ev-lightningblackjack&page=Casino",
+                                    "mobile": "#PRAGMATIC-FRUIT_PARTY_2"
+                                },
+                                "terms-and-conditions": "<ol><li>Sadece kampanya günü Casino Olimpiyatları uygulamasını açan oyuncularımız, günün kampanyasından yararlanabiliyor olacaktır.</li> <li>14 Şubat tarihinde Lightning Blackjack bahisleriniz ile kampanyaya katılmaya hak kazanırsınız.</li><li>Lightning Blackjack'te minimum 2.000 TL (toplam) bahis yapan her oyuncu 100 TL bonus kazanacaktır.</li><li>Bonus bakiyesi ile yapılan bahisler kampanya dışıdır.</li><li>Kampanya &Ouml;d&uuml;l&uuml; hesabınıza Bonus olarak aktarılacaktır.</li><li>14 Şubat tarihlnde &ccedil;ekim talebi vermeniz ile otomatik olarak kampanya dışı kalacaksınız.</li><li>Kampanya &ouml;d&uuml;l&uuml; 15 Şubat g&uuml;n&uuml; saat 15:00&rsquo;den sonra hesabınıza aktarılacaktır.</li><li>Bonus, hesabınıza aktarılmasının ardından 30 g&uuml;n ge&ccedil;erli olacaktır.</li><li>Bonusun 20 katı &ccedil;evirim koşulu , hesaba eklenmesini takip eden 30 g&uuml;n i&ccedil;inde Casino/ Canlı Casino oyunlarında tamamlanmalıdır.</li><li>Bu s&uuml;renin aşılması durumunda, hesabınızda kalan mevcut bonus tutarı ve bonusla elde edeceğiniz olası kazan&ccedil;lar ge&ccedil;ersiz sayılır.</li><li>Genel H&uuml;k&uuml;m ve Koşullar ge&ccedil;erlidir.</li></ol>",
+                                "image": "lightningblackjack.png",
+                                "title": "CANLI CASİNO ÖZEL"
+                            }
+                        }
+                    }
+                },
+                {
+                    "module": "minigameSpinTheWheel", // name of the module to (lazy) load
+                    "lobby": { // What are we going to show in the lobby
+                        "en": {
+                            "image": "https://united.mediaglb.com/apps/olympics-2022/onboarding-promos.png",
+                            "title": "Daily promotions"
+                        }
+                    },
+                    "howItWorks": { // What are we going to show in the how it works page
+                        "en": {
+                            "image": "https://united.mediaglb.com/apps/olympics-2022/onboarding-promos.png",
+                            "title": "Daily promotions",
+                            "terms": [
+                                "This is term no.1",
+                                "This is term no.2",
+                                "This is term no.3"
+                            ]
+                        }
+                    },
+                    "settings": { // Specific settings for this module. Each module will have its own settings structure
+                    }
+                }
+            ]
+        }
+    }
+}
